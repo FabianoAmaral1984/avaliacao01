@@ -17,9 +17,12 @@ routes.get("/:id",(req,res)=>{
 })
 
 routes.post("/",(req,res)=>{
-    res.status(200).json(lista)
+    res.send(200).json(lista)
 })
 
+routes.put("/:id",(req,res)=>{
+    res.send(200).json(lista)
+})
 
 routes.delete("/:id",(req,res)=>{
     lista.splice(req.params.id-1,1)
